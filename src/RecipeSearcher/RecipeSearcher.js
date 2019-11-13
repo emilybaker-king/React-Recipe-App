@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import axios from 'axios';
+import RecipeList from '../RecipeList/RecipeList';
 
 class RecipeSearcher extends Component {
 
@@ -10,7 +11,7 @@ class RecipeSearcher extends Component {
     }
 
     componentDidMount() {
-        this.getRandomRecipe();
+        this.getRecipeByLetter('C');
     }
 
     getRandomRecipe = () => {
@@ -71,11 +72,11 @@ class RecipeSearcher extends Component {
 
     render() {
 
-        this.getRecipeByLetter('B');
+        this.getRecipeByLetter('G');
 
         return (
             <div>
-
+                <RecipeList recipes={this.state.recipes} />
             </div>
         );
     }
