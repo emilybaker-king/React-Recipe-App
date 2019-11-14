@@ -1,0 +1,15 @@
+
+@import url('https://fonts.googleapis.com/css?family=Rye&display=swap');
+
+.searcherDiv {
+    background-color: olivedrab;
+    display: block;
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 15px;
+    -webkit-box-shadow: -1px 7px 71px 13px black;
+    -moz-box-shadow: -1px 7px 71px 13px black;
+    box-shadow: -1px 7px 71px 13px black;
+    font-family: 'Rye', cursive;
+}

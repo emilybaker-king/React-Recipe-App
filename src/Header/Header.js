@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react';
+import './Header.css';
 
 class Header extends Component {
 
@@ -24,7 +25,7 @@ class Header extends Component {
 
     generateLetterButtons() {
         return 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(letter => (
-            <button key={letter} onClick={() => this.props.recipeByLetterHandler(letter)}>
+            <button className='alphabet' key={letter} onClick={() => this.props.recipeByLetterHandler(letter)}>
                 {letter}
             </button>
         ));
@@ -34,15 +35,15 @@ class Header extends Component {
         return (
             <div>
                 <h1>Recipe Finder</h1>
-                <p>Get Recipes By Letter</p>
+                <p>Get Recipes By Letter:</p>
                 {this.generateLetterButtons()}
-                <p>Get Recipes By Keyword</p>
+                <p>Get Recipes By Keyword:</p>
                 <form onSubmit={this.handleSubmit}>
-                    <input type='text' value={this.state.textFieldValue} onChange={this.handleChange} />
-                    <input type='submit' value='Submit' />
+                    <input className='textField' type='text' value={this.state.textFieldValue} onChange={this.handleChange} />
+                    <input className='submitButton' type='submit' value='Submit' />
                 </form>
-                <p>Get Random Recipe</p>
-                <button onClick={() => this.props.randomRecipeHandler()}>Submit</button>
+                <p>Get Random Recipe:</p>
+                <button className='randomButton' onClick={() => this.props.randomRecipeHandler()}>Random</button>
             </div>
         );
     }

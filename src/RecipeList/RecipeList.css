@@ -1,0 +1,28 @@
+
+@import url('https://fonts.googleapis.com/css?family=Rye&display=swap');
+
+.list {
+    list-style-type: none;
+    padding-bottom: 50px;
+    margin-right: 60px;
+    margin-left: 60px;
+    text-align: center;
+    font-family: 'Rye', cursive;
+}
+
+.instructions {
+    padding-bottom: 20px;
+    margin-right: 60px;
+    margin-left: 60px;
+    font-family: 'Rye', cursive;
+}
+
+.recipeName {
+    text-decoration: underline;
+    font-family: 'Rye', cursive;
+}
+
+img {
+    border-radius: 10px;
+    margin-bottom: 50px;
+}

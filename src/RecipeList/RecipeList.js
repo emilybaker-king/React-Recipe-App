@@ -1,15 +1,16 @@
 
 import React, { Component } from 'react';
+import './RecipeList.css';
 
 class RecipeList extends Component {
 
     getListItems() {
         return this.props.recipes.map((recipe) =>
             <li key={recipe.idMeal}>
-                <h1>{recipe.strMeal}</h1>
+                <h1 className='recipeName'>{recipe.strMeal}</h1>
                 <img src={recipe.strMealThumb} alt={recipe.strMeal} />
-                <p>{recipe.strInstructions}</p>
-                <ul>
+                <p className='instructions'>{recipe.strInstructions}</p>
+                <ul className='list'>
                     {this.getIngredientList(recipe)}
                 </ul>
             </li>
@@ -31,9 +32,15 @@ class RecipeList extends Component {
     }
 
     render() {
-        return (
-            <ul>{this.getListItems()}</ul>
-        );
+        if (this.props.recipes.length > 0) {
+            return (
+                <ul className='list'>{this.getListItems()}</ul>
+            );
+        } else {
+            return (
+                <h1>No recipes were found. Please try a different letter or keyword.</h1>
+            );
+        }
     }
 }
 
